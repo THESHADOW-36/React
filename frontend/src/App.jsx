@@ -7,6 +7,8 @@ import Register from "./Components/Register"
 import Counter from './Components/Counter';
 import Effect1 from './Components/13-09-23/UseEffect1';
 import Effect2 from './Components/13-09-23/UseEffect2'
+import Effect3 from './Components/15-09-23/UseEffect3';
+import Effect4 from './Components/15-09-23/UseEffect4';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route exact path='/counter' element={<Counter />} />
         <Route exact path='/effect1' element={<Effect1 />} />
         <Route exact path='/effect2' element={<Effect2 />} />
+        <Route exact path='/effect3' element={<Effect3 />} />
+        <Route exact path='/effect4' element={<Effect4 />} />
       </Routes>
     </div>
   );

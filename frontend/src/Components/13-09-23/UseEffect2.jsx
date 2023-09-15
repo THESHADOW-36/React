@@ -7,7 +7,7 @@ function Effect2(){
    const router = useNavigate()
 
    useEffect(()=>{
-      alert("First render and Reload")
+      alert("Empty dependencies - First render and Reload")
    },[])
 
    return (
