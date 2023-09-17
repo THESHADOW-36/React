@@ -9,6 +9,8 @@ import Effect1 from './Components/13-09-23/UseEffect1';
 import Effect2 from './Components/13-09-23/UseEffect2'
 import Effect3 from './Components/15-09-23/UseEffect3';
 import Effect4 from './Components/15-09-23/UseEffect4';
+import SinglePage from './Components/15-09-23/SingleProduct';
+import Params from './Components/15-09-23/Params';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route exact path='/effect2' element={<Effect2 />} />
         <Route exact path='/effect3' element={<Effect3 />} />
         <Route exact path='/effect4' element={<Effect4 />} />
+        <Route exact path='/params' element={<Params />} />
+        <Route exact path='/singleproduct/:id/:name' element={<SinglePage />} />
       </Routes>
     </div>
   );
