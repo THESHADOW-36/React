@@ -1,0 +1,17 @@
+.Active-Button{
+   background-color: rgb(67, 193, 67);
+   border: 1px solid black;
+   border-radius: 4px;
+   padding: 8px 20px;
+   font-size: 16px;
+   font-weight: 800px;
+}
+
+.Inactive-Button{
+   background-color: rgb(239, 54, 54);
+   border: 1px solid rgb(0, 0, 0);
+   border-radius: 4px;
+   padding: 8px 20px;
+   font-size: 16px;
+   font-weight: 800px;
+}

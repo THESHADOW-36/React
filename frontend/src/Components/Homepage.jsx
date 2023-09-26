@@ -19,6 +19,12 @@ function Homepage() {
          <button onClick={()=>router("/counterse")}>CounterSE</button>
          <button onClick={()=>router("/mapping")}>Mapping</button>
          <button onClick={()=>router("/ternary")}>Ternary</button>
+         <br />
+         <button onClick={()=>router('/dynamic-styles')}>DynamicStyles</button>
+         <br />
+         <button onClick={()=>router('/children-prop')}>ChildrenProp</button>
+         <br />
+         <button onClick={()=>router('/sign-up')}>SignUp</button>
       </div>
    )
 }

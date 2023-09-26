@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import { Children ,useState } from 'react';
+import { useState } from 'react';
 import Homepage from './Components/Homepage';
 import Login from "./Components/Login"
 import Register from "./Components/Register"
@@ -15,6 +15,9 @@ import Params from './Components/15-09-23/Params';
 import Counterse from './Components/16-09-23/Counterse';
 import Mapping from './Components/16-09-23/Mapping';
 import Ternary from './Components/16-09-23/Ternary';
+import DynamicStyles from './Components/20-09-23/DynamicStyles';
+import ChildrenProp from './Components/22-09-23/ChildrenProp';
+import SignUp from './Components/22-09-23/SignUp';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -33,7 +36,10 @@ function App() {
         <Route exact path='/singleproduct/:id/:name' element={<SinglePage />} />
         <Route exact path='/counterse' element={<Counterse />} />
         <Route exact path='/mapping' element={<Mapping names={["Dinesh", "Rahul", "Swaraj"]} greeting={"Hello"} />} />
-        <Route exact path='/ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn}/>} />
+        <Route exact path='/ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+        <Route exact path='/dynamic-styles' element={<DynamicStyles />} />
+        <Route exact path='/children-prop' element={<ChildrenProp />} />
+        <Route exact path='/sign-up' element={<SignUp />} />
       </Routes>
     </div>
   );
