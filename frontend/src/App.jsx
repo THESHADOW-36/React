@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
+import { Children ,useState } from 'react';
 import Homepage from './Components/Homepage';
 import Login from "./Components/Login"
 import Register from "./Components/Register"
@@ -11,8 +12,12 @@ import Effect3 from './Components/15-09-23/UseEffect3';
 import Effect4 from './Components/15-09-23/UseEffect4';
 import SinglePage from './Components/15-09-23/SingleProduct';
 import Params from './Components/15-09-23/Params';
+import Counterse from './Components/16-09-23/Counterse';
+import Mapping from './Components/16-09-23/Mapping';
+import Ternary from './Components/16-09-23/Ternary';
 
 function App() {
+  const [loggedIn, setIsLoggedIn] = useState(false)
   return (
     <div className="App">
       <Routes>
@@ -26,6 +31,9 @@ function App() {
         <Route exact path='/effect4' element={<Effect4 />} />
         <Route exact path='/params' element={<Params />} />
         <Route exact path='/singleproduct/:id/:name' element={<SinglePage />} />
+        <Route exact path='/counterse' element={<Counterse />} />
+        <Route exact path='/mapping' element={<Mapping names={["Dinesh", "Rahul", "Swaraj"]} greeting={"Hello"} />} />
+        <Route exact path='/ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn}/>} />
       </Routes>
     </div>
   );

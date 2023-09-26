@@ -15,6 +15,10 @@ function Homepage() {
          <button onClick={() => router("/effect3")}>Effect3</button>
          <button onClick={() => router("/effect4")}>Effect4</button>
          <button onClick={() => router("/params")}>Params</button>
+         <br />
+         <button onClick={()=>router("/counterse")}>CounterSE</button>
+         <button onClick={()=>router("/mapping")}>Mapping</button>
+         <button onClick={()=>router("/ternary")}>Ternary</button>
       </div>
    )
 }
