@@ -18,6 +18,7 @@ import Ternary from './Components/16-09-23/Ternary';
 import DynamicStyles from './Components/20-09-23/DynamicStyles';
 import ChildrenProp from './Components/22-09-23/ChildrenProp';
 import SignUp from './Components/22-09-23/SignUp';
+import StyledComponents from './Components/16-09-23/StyledComponenets';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -37,6 +38,7 @@ function App() {
         <Route exact path='/counterse' element={<Counterse />} />
         <Route exact path='/mapping' element={<Mapping names={["Dinesh", "Rahul", "Swaraj"]} greeting={"Hello"} />} />
         <Route exact path='/ternary' element={<Ternary loggedIn={loggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+        <Route exact path='/styled-components' element={<StyledComponents/>}/>
         <Route exact path='/dynamic-styles' element={<DynamicStyles />} />
         <Route exact path='/children-prop' element={<ChildrenProp />} />
         <Route exact path='/sign-up' element={<SignUp />} />

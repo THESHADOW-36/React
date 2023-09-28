@@ -2,11 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 const SignUp = () => {
+   // eslint-disable-next-line
    const [userData, setUserData] = useState({ name: '', email: '', password: '' })
-   // console.log(userData)
+   console.log(userData)
 
    const hanleChange = (event) => {
-      console.log(event.target.value)
+      console.log(event.target.value,"value", event.target.name, "name")
    }
 
    const sendDataToBackend = () => {
@@ -18,7 +19,7 @@ const SignUp = () => {
          <h1>Register</h1>
          <form onSubmit={sendDataToBackend}>
             <label>Name</label><br />
-            <input name="name" type="text" onChange={hanleChange} /><br />
+            <input name="user-name" type="text" onChange={hanleChange} /><br />
             <label>Email</label><br />
             <input name="email" type="email" onChange={hanleChange} /><br />
             <label>Password</label><br />

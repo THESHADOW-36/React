@@ -19,6 +19,7 @@ function Homepage() {
          <button onClick={()=>router("/counterse")}>CounterSE</button>
          <button onClick={()=>router("/mapping")}>Mapping</button>
          <button onClick={()=>router("/ternary")}>Ternary</button>
+         <button onClick={()=>router("/styled-components")}>StyledCompo</button>
          <br />
          <button onClick={()=>router('/dynamic-styles')}>DynamicStyles</button>
          <br />
