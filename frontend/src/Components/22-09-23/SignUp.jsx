@@ -46,7 +46,7 @@ const SignUp = () => {
             <label>Password</label><br />
             <input name="password" type="password" onChange={hanleChange} /><br />
             <br />
-            <input type="Submit" value="Register here" />
+            <input type="Submit" value="Submit" />
          </form>
       </div>
    )
