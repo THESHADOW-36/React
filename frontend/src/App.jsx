@@ -21,6 +21,7 @@ import SignUp from './Components/22-09-23/SignUp';
 import StyledComponents from './Components/16-09-23/StyledComponenets';
 import PageNotFound from './Components/29-09-23/PageNotFound';
 import { ClassComponent } from './Components/29-09-23/ClassComponent';
+import Products from './Components/30-09-23/Products';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -46,6 +47,7 @@ function App() {
         <Route exact path='/children-prop' element={<ChildrenProp />} />
         <Route exact path='/sign-up' element={<SignUp />} />
         <Route exact path='/class-component' element={<ClassComponent />} />
+        <Route exact path='/products' element={<Products/>}/>
       </Routes>
     </div>
   );

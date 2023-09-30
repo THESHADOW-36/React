@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 
@@ -27,6 +28,10 @@ function Homepage() {
          <button onClick={() => router('/sign-up')}>SignUp</button>
          <br />
          <button onClick={() => router('/class-component')}>ClassComponent</button>
+         <button onClick={() => router('/products')}>Products</button>
+         <br />
+         <button onClick={() => toast.error("Error")}>Error</button>
+         <button onClick={() => toast.success("Success")}>Success</button>
       </div>
    )
 }
