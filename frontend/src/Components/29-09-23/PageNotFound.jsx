@@ -8,15 +8,19 @@ function PageNotFound() {
   const [timer, setTimer] = useState(5)
 
   useEffect(() => {
-    if (timer > 0) {
-      setTimeout(() => {
-        setTimer(timer - 1)
-      }, 1000);
-    } else {
+    setTimeout(() => {
       router("/")
-    }
+    }, 5000);
     // eslint-disable-next-line
   }, [])
+
+  setInterval(() => {
+    if (timer > 0) {
+      setTimer(timer - 1)
+    }
+  }, 1000);
+
+
   return (
     <div>
       <h2>Page Not Found, redirecting you to home page in {timer} sec..</h2>
