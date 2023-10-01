@@ -1,0 +1,32 @@
+.index {
+   /* border: 1px solid red; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.react-logo>img {
+   /* border: 1px solid blue; */
+   width: 60px;
+   color: rgb(20, 158, 202);
+   margin-top: 5px;
+   margin-right: 5px;
+}
+
+.react-logo1 {
+   font-size: 50px;
+   color: rgb(20, 158, 202);
+}
+
+.react-text {
+   /* border: 1px solid green; */
+   font-size: 45px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+}
+
+.body-content > button {
+   font-size: 24px;
+   padding: 2px 10px;
+   margin:2px;
+}

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios"
 import "./Products.css"
-
 const Products = () => {
    const [products, setProducts] = useState([])
-
+   const router = useNavigate()
    useEffect(() => {
       async function getProducts() {
          try {
@@ -25,7 +25,7 @@ const Products = () => {
          {products?.length ?
             <div className="pro-layout">
                {products.map((pro) => (
-                  <div className="pro-content">
+                  <div className="pro-content" onClick={()=>router(`/single-product-page/${pro.id}`)}>
                      <div className="pro-img-box">
                         <img src={pro.image} alt="product-img" className="pro-img" />
                      </div>

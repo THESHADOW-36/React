@@ -3,9 +3,9 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react';
 import Homepage from './Components/Homepage';
-import Login from "./Components/Login"
-import Register from "./Components/Register"
-import Counter from './Components/Counter';
+import Login from "./Components/13-09-23/Login"
+import Register from "./Components/13-09-23/Register"
+import Counter from './Components/13-09-23/Counter';
 import Effect1 from './Components/13-09-23/UseEffect1';
 import Effect2 from './Components/13-09-23/UseEffect2'
 import Effect3 from './Components/15-09-23/UseEffect3';
@@ -22,6 +22,7 @@ import StyledComponents from './Components/16-09-23/StyledComponenets';
 import PageNotFound from './Components/29-09-23/PageNotFound';
 import { ClassComponent } from './Components/29-09-23/ClassComponent';
 import Products from './Components/30-09-23/Products';
+import SingleProductPage from './Components/01-10-23/SingleProductPage';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -48,6 +49,7 @@ function App() {
         <Route exact path='/sign-up' element={<SignUp />} />
         <Route exact path='/class-component' element={<ClassComponent />} />
         <Route exact path='/products' element={<Products/>}/>
+        <Route exact path='/single-product-page/:id' element={<SingleProductPage/>}/>
       </Routes>
     </div>
   );
