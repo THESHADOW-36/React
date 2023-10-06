@@ -24,6 +24,7 @@ import { ClassComponent } from './Components/29-09-23/ClassComponent';
 import Products from './Components/30-09-23/Products';
 import SingleProductPage from './Components/01-10-23/SingleProductPage';
 import AddProduct from './Components/04-10-23/AddProduct';
+import UseMemo from './Components/06-10-23/Usememo';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -52,6 +53,7 @@ function App() {
         <Route exact path='/products' element={<Products/>}/>
         <Route exact path='/single-product-page/:id' element={<SingleProductPage/>}/>
         <Route exact path='/add-product' element={<AddProduct/>}/>
+        <Route exact path='/memo' element={<UseMemo/>}/>
       </Routes>
     </div>
   );

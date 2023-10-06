@@ -43,6 +43,8 @@ function Homepage() {
          <button onClick={() => toast.success("Success")}>Success</button>
          <br />
          <button onClick={()=>router("/add-product")}>Add Product</button>
+         <br />
+         <button onClick={()=>router('/memo')}>Memo</button>
       </div>
    )
 }
