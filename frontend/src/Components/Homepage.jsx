@@ -41,10 +41,11 @@ function Homepage() {
          <br />
          <button onClick={() => toast.error("Error")}>Error</button>
          <button onClick={() => toast.success("Success")}>Success</button>
+         <button onClick={() => router('/memo')}>Memo</button>
          <br />
-         <button onClick={()=>router("/add-product")}>Add Product</button>
+         <button onClick={() => router("/add-product")}>Add Product</button>
          <br />
-         <button onClick={()=>router('/memo')}>Memo</button>
+         <button onClick={() => router('/callback')}>CallBack</button>
       </div>
    )
 }

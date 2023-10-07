@@ -25,6 +25,7 @@ import Products from './Components/30-09-23/Products';
 import SingleProductPage from './Components/01-10-23/SingleProductPage';
 import AddProduct from './Components/04-10-23/AddProduct';
 import UseMemo from './Components/06-10-23/Usememo';
+import CallBack from './Components/07-10-23/CallBack';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -54,6 +55,7 @@ function App() {
         <Route exact path='/single-product-page/:id' element={<SingleProductPage/>}/>
         <Route exact path='/add-product' element={<AddProduct/>}/>
         <Route exact path='/memo' element={<UseMemo/>}/>
+        <Route exact path='/callback' element={<CallBack/>}/>
       </Routes>
     </div>
   );
