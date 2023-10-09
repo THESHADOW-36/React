@@ -6,7 +6,7 @@ const Todos = ({ todos, addTodo }) => {
       <div>
          <h1>Todos</h1>
          <button onClick={addTodo}>Add todo</button>
-         {todos.map((todo)=>(
+         {todos.map((todo) => (
             <h2>{todo}</h2>
          ))}
       </div>

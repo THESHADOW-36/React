@@ -19,7 +19,7 @@ const DynamicStyles = () => {
             {isButtonActive ? 'Active' : 'Inactive'}
          </button>
          <br />
-         <button className="homepage" onClick={()=>router('/')}>Homepage</button>
+         <button className="homepage" onClick={() => router('/')}>Homepage</button>
       </div>
    )
 }

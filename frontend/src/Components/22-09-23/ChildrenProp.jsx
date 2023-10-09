@@ -7,7 +7,7 @@ const ChildrenProp = () => {
       <>
          <H1>Hello</H1>
          <Button>Message</Button>
-         <button onClick={()=>router('/')}>Homepage</button>
+         <button onClick={() => router('/')}>Homepage</button>
       </>
    )
 }

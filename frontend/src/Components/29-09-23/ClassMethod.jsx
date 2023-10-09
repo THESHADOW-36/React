@@ -5,15 +5,15 @@ class Person {
     this.age = age;
   }
 
-  sayHello(){
+  sayHello() {
     console.log(`Hello, my name is ${this.name}.`)
   }
 
-  myAge(){
+  myAge() {
     console.log(`My age is ${this.age}`)
   }
 }
 
-const john = new Person('John',20)
+const john = new Person('John', 20)
 john.sayHello()
 john.myAge()

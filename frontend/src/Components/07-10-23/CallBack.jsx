@@ -13,7 +13,7 @@ const CallBack = () => {
    //    setTodos([...todos, "New Todo"])
    // }
 
-   const addTodo = useCallback(()=> {
+   const addTodo = useCallback(() => {
       setTodos([...todos, "New Todo"])
    }, [todos])
 

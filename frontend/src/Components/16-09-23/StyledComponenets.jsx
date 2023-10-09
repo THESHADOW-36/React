@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from 'styled-components'
 
-function StyledComponents(){
+function StyledComponents() {
   const router = useNavigate()
   const Button = styled.button`
     border-radius: 8px;
@@ -12,11 +12,11 @@ function StyledComponents(){
     font-weight: 800;
     padding: 10px
   `
-  return(
-    <div style={{backgroundColor: 'orange',height: '200px'}}>
+  return (
+    <div style={{ backgroundColor: 'orange', height: '200px' }}>
       <h1>Styled Components</h1>
       <br />
-      <Button onClick={()=>router('/')}>Homepage</Button>
+      <Button onClick={() => router('/')}>Homepage</Button>
     </div>
   )
 }

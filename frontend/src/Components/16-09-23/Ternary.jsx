@@ -9,8 +9,8 @@ function Ternary({ loggedIn, setIsLoggedIn }) {
          <h1>Ternary Operator</h1>
 
          {loggedIn ?
-            <h1 onClick={() => setIsLoggedIn((preValue) => !preValue)}>Welcome</h1>:
-            <button onClick={()=>setIsLoggedIn((preValue) => !preValue)}>Log In</button>
+            <h1 onClick={() => setIsLoggedIn((preValue) => !preValue)}>Welcome</h1> :
+            <button onClick={() => setIsLoggedIn((preValue) => !preValue)}>Log In</button>
          }
 
          <br />

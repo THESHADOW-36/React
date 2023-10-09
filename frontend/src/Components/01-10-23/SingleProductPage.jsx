@@ -6,7 +6,7 @@ import "./SingleProductPage.css"
 const SingleProductPage = () => {
    const [productData, setProductData] = useState({})
    const router = useNavigate()
-   function HomepageNav(){
+   function HomepageNav() {
       router('/products')
    }
    const { id } = useParams()

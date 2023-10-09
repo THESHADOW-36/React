@@ -6,7 +6,7 @@ function Effect1() {
    const [count, setCount] = useState(0)
    const router = useNavigate()
 
-   useEffect(()=>{
+   useEffect(() => {
       alert('No Dependency - First render, Reload and State change')
    })
    return (
@@ -14,7 +14,7 @@ function Effect1() {
          <p>Count = {count}</p>
          <button onClick={() => setCount((add) => add + 1)}>Add</button>
          <br />
-         <button onClick={()=>router('/')}>Homepage</button>
+         <button onClick={() => router('/')}>Homepage</button>
       </div>
    )
 }

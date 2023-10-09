@@ -6,14 +6,14 @@ const UseMemo = () => {
    const [counter, setCounter] = useState(0)
    const [todos, setTodos] = useState([])
 
-   function addTodos(){
-      setTodos([...todos,"New todos"])
+   function addTodos() {
+      setTodos([...todos, "New todos"])
    }
 
 
    // const lengthyCalculation = calculation(counter)
-   const lengthyCalculation = useMemo(()=>calculation(counter),[counter])
-   
+   const lengthyCalculation = useMemo(() => calculation(counter), [counter])
+
 
    return (
       <div>
@@ -21,7 +21,7 @@ const UseMemo = () => {
          <h1>Counter - {counter}</h1>
          <button onClick={() => setCounter((value) => value + 1)}>+</button>
          <button onClick={addTodos}>Add Todos</button>
-         {todos.map((todo)=>(
+         {todos.map((todo) => (
             <h2>{todo}</h2>
          ))}
       </div>

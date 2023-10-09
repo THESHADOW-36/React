@@ -33,7 +33,7 @@ const Products = () => {
                         <h1 className="pro-name">{pro.title}</h1>
                         <div className="pro-text">
                            <p className="pro-price">Price: {pro.price}$</p>
-                           <button className="add-cart" onClick={()=>router(`/single-product-page/${pro.id}`)}>Click to View</button>
+                           <button className="add-cart" onClick={() => router(`/single-product-page/${pro.id}`)}>Click to View</button>
                         </div>
                      </div>
                   </div>

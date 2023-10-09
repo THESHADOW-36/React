@@ -2,13 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Effect2(){
+function Effect2() {
    const [count, setCount] = useState(0)
    const router = useNavigate()
 
-   useEffect(()=>{
+   useEffect(() => {
       alert("Empty dependencies - First render and Reload")
-   },[])
+   }, [])
 
    return (
       <div>
