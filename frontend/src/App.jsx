@@ -26,6 +26,8 @@ import SingleProductPage from './Components/01-10-23/SingleProductPage';
 import AddProduct from './Components/04-10-23/AddProduct';
 import UseMemo from './Components/06-10-23/Usememo';
 import CallBack from './Components/07-10-23/CallBack';
+import UseReducerExample from './Components/08-10-23/UseReducerExample';
+import UseReducer from './Components/08-10-23/UseReducer';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -51,11 +53,13 @@ function App() {
         <Route exact path='/children-prop' element={<ChildrenProp />} />
         <Route exact path='/sign-up' element={<SignUp />} />
         <Route exact path='/class-component' element={<ClassComponent />} />
-        <Route exact path='/products' element={<Products/>}/>
-        <Route exact path='/single-product-page/:id' element={<SingleProductPage/>}/>
-        <Route exact path='/add-product' element={<AddProduct/>}/>
-        <Route exact path='/memo' element={<UseMemo/>}/>
-        <Route exact path='/callback' element={<CallBack/>}/>
+        <Route exact path='/products' element={<Products />} />
+        <Route exact path='/single-product-page/:id' element={<SingleProductPage />} />
+        <Route exact path='/add-product' element={<AddProduct />} />
+        <Route exact path='/memo' element={<UseMemo />} />
+        <Route exact path='/callback' element={<CallBack />} />
+        <Route exact path='/use-reducer-example' element={<UseReducerExample />} />
+        <Route exact path='/use-reducer' element={<UseReducer />} />
       </Routes>
     </div>
   );
