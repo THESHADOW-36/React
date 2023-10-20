@@ -10,7 +10,7 @@ const SignUp = () => {
 
    const router = useNavigate()
 
-   const hanleChange = (event) => {
+   const handleChange = (event) => {
       // console.log(event.target.value,"value", event.target.name, "name")
       setUserData({ ...userData, [event.target.name]: event.target.value })
    }
@@ -47,11 +47,11 @@ const SignUp = () => {
          <h1>Register</h1>
          <form onSubmit={sendDataToBackend}>
             <label>Name</label><br />
-            <input name="name" type="text" onChange={hanleChange} /><br />
+            <input name="name" type="text" onChange={handleChange} /><br />
             <label>Email</label><br />
-            <input name="email" type="email" onChange={hanleChange} /><br />
+            <input name="email" type="email" onChange={handleChange} /><br />
             <label>Password</label><br />
-            <input name="password" type="password" onChange={hanleChange} /><br />
+            <input name="password" type="password" onChange={handleChange} /><br />
             <br />
             <input type="Submit" value="Submit" />
          </form>

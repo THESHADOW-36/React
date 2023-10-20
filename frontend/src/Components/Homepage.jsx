@@ -35,20 +35,19 @@ function Homepage() {
          <button onClick={() => router('/dynamic-styles')}>DynamicStyles</button>
          <button onClick={() => router('/children-prop')}>ChildrenProp</button>
          <button onClick={() => router('/sign-up')}>SignUp</button>
-         <br />
          <button onClick={() => router('/class-component')}>ClassComponent</button>
-         <button onClick={() => router('/products')}>Products</button>
          <br />
+         <button onClick={() => router('/products')}>Products</button>
+         <button onClick={() => router("/add-product")}>Add Product</button>
          <button onClick={() => toast.error("Error")}>Error</button>
          <button onClick={() => toast.success("Success")}>Success</button>
          <button onClick={() => router('/memo')}>Memo</button>
-         <br />
-         <button onClick={() => router("/add-product")}>Add Product</button>
+         <button onClick={() => router('/use-reducer')}>UseReducer</button>
          <br />
          <button onClick={() => router('/callback')}>CallBack</button>
+         <button onClick={() => router('/custom-hook-c')}>CustomHook C</button>
+         <button onClick={() => router('/custom-hook-ls')}>CustomHook LS</button>
 
-
-         <br />
          <br />
          <br />
          <h1>Counter : {state.counter}</h1>
