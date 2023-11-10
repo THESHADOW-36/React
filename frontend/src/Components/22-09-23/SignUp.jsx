@@ -19,12 +19,12 @@ const SignUp = () => {
       // alert("Data submitted to backend..")
       event.preventDefault()
       if (userData.name && userData.email && userData.password) {
-         if (userData.password.length >= 8) {
+         if (userData.password.length >= 20) {
             try {
-               const response = await axios.post("http://localhost:8000/register", { userData });
+               const response = await axios.post("http://localhost:8000/api/v1/auth/register", { userData });
                // const response = { data: { success: true } }
                if (response.data.success) {
-                  toast("Registration Successful")
+                  toast.success("Registration Successful")
                   router("/")
                } else {
                   throw new Error("Something went wrong...")
