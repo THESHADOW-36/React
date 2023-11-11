@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import axios from "axios"
 import "./Products.css"
+import api from "../../Helpers/Axios.Config";
 const Products = () => {
    const [products, setProducts] = useState([])
    const router = useNavigate()
    useEffect(() => {
       async function getProducts() {
          try {
-            const { data } = await axios.get('https://fakestoreapi.com/products')
-            setProducts(data)
+            // const { data } = await axios.get('https://fakestoreapi.com/products')
+            const { data } = await api.get('/product/get-all-product')
+            if (data) {
+               setProducts(data.products)
+            }
          } catch (error) {
-            toast.error(error.message)
+            toast.error(error.data.message)
          }
       }
       getProducts()
@@ -30,7 +33,7 @@ const Products = () => {
                         <img src={pro.image} alt="product-img" className="pro-img" />
                      </div>
                      <div className="pro-text-layout">
-                        <h1 className="pro-name">{pro.title}</h1>
+                        <h1 className="pro-name">{pro.name}</h1>
                         <div className="pro-text">
                            <p className="pro-price">Price: {pro.price}$</p>
                            <button className="add-cart" onClick={() => router(`/single-product-page/${pro.id}`)}>Click to View</button>
