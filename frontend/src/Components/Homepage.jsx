@@ -2,12 +2,14 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import "./Homepage.css"
 import { useContext } from "react";
-import { MyContext } from "./Context/GlobalContext";
+// import { MyContext } from "./Context/GlobalContext";
+import { AuthContext } from "./Context/AuthContext";
 
 
 function Homepage() {
    const router = useNavigate()
-   const {state, dispatch} = useContext(MyContext)
+   // const {state, dispatch} = useContext(MyContext)
+   const { state } = useContext(AuthContext)
 
    return (
       <div className="body-content">
@@ -17,6 +19,8 @@ function Homepage() {
             </div>
             <h1 className="react-text">REACT</h1>
          </div>
+
+         <h1>Welcome,{state?.user?.name}</h1>
          <button onClick={() => router("/register")}>Register</button>
          <button onClick={() => router("/login")}>Login</button>
          <button onClick={() => router("/counter")}>Counter</button>
@@ -50,10 +54,10 @@ function Homepage() {
 
          <br />
          <br />
-         <h1>Counter : {state.counter}</h1>
-         <button onClick={()=>dispatch({type:"DECREMENT"})}>-</button>
-         <button onClick={()=>dispatch({type:"RESET"})}>RESET</button>
-         <button onClick={()=>dispatch({type:"INCREMENT"})}>+</button>
+         {/* <h1>Counter : {state.counter}</h1> */}
+         {/* <button onClick={()=>dispatch({type:"DECREMENT"})}>-</button> */}
+         {/* <button onClick={()=>dispatch({type:"RESET"})}>RESET</button> */}
+         {/* <button onClick={()=>dispatch({type:"INCREMENT"})}>+</button> */}
       </div>
    )
 }
