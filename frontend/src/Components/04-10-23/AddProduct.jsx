@@ -1,10 +1,16 @@
-import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { AuthContext } from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import api from "../../Helpers/Axios.Config";
 
 
 const AddProduct = () => {
-   const [productData, setProductData] = useState({ userID: "", name: "", price: "", image: "", category: "" })
+   const router = useNavigate()
+
+   const { state } = useContext(AuthContext)
+
+   const [productData, setProductData] = useState({ name: "", price: "", image: "", category: "" })
 
    const handleChange = (event) => {
       // console.log(event.target.name,event.target.value)
@@ -13,28 +19,34 @@ const AddProduct = () => {
 
    const handleSubmit = async (event) => {
       event.preventDefault();
-      if (productData.userID && productData.name && productData.price && productData.image && productData.category) {
+      if (productData.name && productData.price && productData.image && productData.category) {
          try {
-            // const { data } = await axios.post("https://fakestoreapi.com/products", { title: productData.name, price: productData.price, image: productData.image })
-            const { data } = await axios.post("http://localhost:8000/api/v1/product/add-product", {productData})
-            console.log(data, "responses")
-            toast.success("Product updated successfully")
-            setProductData({ userID: "", name: "", price: "", image: "" , category: "" })
+            const { data } = await api.post("/product/add-product", { name: productData.name, price: productData.price, image: productData.image, category: productData.category, id: state?.user.id })
+            if (data.success) {
+               toast.success(data.message)
+               setProductData({ name: "", price: "", image: "", category: "" })
+            }
          }
          catch (error) {
             console.log(error)
+            toast.error(error.response.data.message)
          }
       } else {
          toast.error("All fields are mandatory")
       }
    }
 
+   useEffect(() => {
+      if (state?.user && state?.user?.name === undefined) {
+         router("/login")
+         toast.error("Pls login to access this page")
+      }
+   }, [state])
+
    return (
       <div>
          <h1>Add Product</h1>
          <form onSubmit={handleSubmit}>
-            <label>User ID</label><br />
-            <input type="text" name="userID" onChange={handleChange} value={productData.userID} /><br />
             <label>Product Name</label><br />
             <input type="text" name="name" onChange={handleChange} value={productData.name} /><br />
             <label>Product Price</label><br />

@@ -9,7 +9,7 @@ import { AuthContext } from "./Context/AuthContext";
 function Homepage() {
    const router = useNavigate()
    // const {state, dispatch} = useContext(MyContext)
-   const { state } = useContext(AuthContext)
+   const { state, Logout } = useContext(AuthContext)
 
    return (
       <div className="body-content">
@@ -54,6 +54,8 @@ function Homepage() {
 
          <br />
          <br />
+
+         <button onClick={Logout}>Logout</button>
          {/* <h1>Counter : {state.counter}</h1> */}
          {/* <button onClick={()=>dispatch({type:"DECREMENT"})}>-</button> */}
          {/* <button onClick={()=>dispatch({type:"RESET"})}>RESET</button> */}
