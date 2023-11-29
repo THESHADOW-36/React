@@ -1,8 +1,10 @@
 import React from "react";
+import "./SignUp.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import api from "../../Helpers/Axios.Config";
+import Navbar from "../Header/Navbar";
 
 const SignUp = () => {
    const [userData, setUserData] = useState({ name: "", email: "", password: "" })
@@ -43,19 +45,22 @@ const SignUp = () => {
 
 
    return (
-      <div>
-         <h1>Register</h1>
-         <form onSubmit={sendDataToBackend}>
-            <label>Name</label><br />
-            <input name="name" type="text" onChange={handleChange} /><br />
-            <label>Email</label><br />
-            <input name="email" type="email" onChange={handleChange} /><br />
-            <label>Password</label><br />
-            <input name="password" type="password" onChange={handleChange} /><br />
-            <br />
-            <input type="Submit" value="Submit" />
-         </form>
-      </div>
+      <>
+         <Navbar />
+         <div>
+            <h1>Register</h1>
+            <form onSubmit={sendDataToBackend} className="signup-form">
+               <label>Name</label><br />
+               <input name="name" type="text" onChange={handleChange} /><br />
+               <label>Email</label><br />
+               <input name="email" type="email" onChange={handleChange} /><br />
+               <label>Password</label><br />
+               <input name="password" type="password" onChange={handleChange} /><br />
+               <br />
+               <input type="Submit" value="Submit" />
+            </form>
+         </div>
+      </>
    )
 }
 

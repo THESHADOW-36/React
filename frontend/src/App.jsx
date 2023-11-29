@@ -30,6 +30,9 @@ import UseReducerExample from './Components/08-10-23/UseReducerExample';
 import UseReducer from './Components/08-10-23/UseReducer';
 import CustomHookC from './Components/13-10-23/CustomHookC';
 import CustomHookLS from './Components/13-10-23/CustomHookLS';
+import YourProducts from './Components/YourProducts/YourProducts';
+import UpdateProduct from './Components/UpdateProduct/UpdateProduct';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   const [loggedIn, setIsLoggedIn] = useState(false)
@@ -64,6 +67,9 @@ function App() {
         <Route exact path='/use-reducer' element={<UseReducer />} />
         <Route exact path='/custom-hook-c' element={<CustomHookC />} />
         <Route exact path='/custom-hook-ls' element={<CustomHookLS />} />
+        <Route exact path='/your-products' element={<YourProducts />} />
+        <Route exact path='/update-product/:id' element={<UpdateProduct />} />
+        <Route exact path='/cart' element={<Cart />} />
       </Routes>
     </div>
   );
