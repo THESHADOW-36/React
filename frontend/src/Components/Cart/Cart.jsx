@@ -3,6 +3,7 @@ import Navbar from "../Header/Navbar";
 import { AuthContext } from "../Context/AuthContext";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import api from "../../Helpers/Axios.Config";
 
 const Cart = () => {
   const { state } = useContext(AuthContext);
@@ -11,7 +12,10 @@ const Cart = () => {
 
   async function getYourCartProduct() {
     try {
-      
+      const response = await api.post("/user/cart", { id: state?.user?.id })
+      if (response.data.success) {
+        setCartProducts(response.data.products)
+      }
     } catch (error) {
       console.log(error)
     }
