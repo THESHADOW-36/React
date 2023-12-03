@@ -1,10 +1,9 @@
-.single-pro-pg{
+.single-pro-pg {
    display: flex;
    width: 100%;
-   height:100dvh;
 }
 
-.single-pro-img{
+.single-pro-img {
    /* border: 1px solid red; */
    /* background-color: rgba(255, 89, 0, 0.3); */
    width: 50%;
@@ -13,13 +12,14 @@
    align-items: center;
 }
 
-.single-pro-img img{
+.single-pro-img img {
    /* border: 1px solid green; */
    width: 85%;
    height: 95%;
    object-fit: contain;
 }
-.single-pro-info{
+
+.single-pro-info {
    /* border: 1px solid blue; */
    background-color: rgba(195, 195, 195, 0.3);
    border-left: 1px solid rgba(184, 184, 184, 0.4);
@@ -27,9 +27,9 @@
    text-align: start;
 }
 
-.single-pro-nav{
+.single-pro-nav {
    background-color: yellow;
-   color: rgb(35,35,35);
+   color: rgb(35, 35, 35);
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -37,32 +37,32 @@
    padding: 14px 30px;
 }
 
-.single-pro-cat{
+.single-pro-cat {
    margin: 0px 0px;
    text-transform: capitalize;
 }
 
-.single-pro-cat> span{
+.single-pro-cat>span {
    font-weight: 700;
 }
 
-.single-pro-home-logo{
+.single-pro-home-logo {
    font-size: 20px;
    cursor: pointer
 }
 
 
 
-.sin-pro-lay{
+.sin-pro-lay {
    /* border: 1px solid red; */
-   height: 91vh;
+   height: 83vh;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    padding: 0px 40px;
 }
 
-.sin-pro-lay-1 > p:nth-child(2){
+.sin-pro-lay-1>p:nth-child(2) {
    color: rgb(48, 48, 48);
    display: -webkit-box;
    -webkit-line-clamp: 8;
@@ -70,42 +70,42 @@
    overflow: hidden;
 }
 
-.sin-pro-lay-2{
+.sin-pro-lay-2 {
    padding: 0px 10px 30px 10px;
 }
 
-.single-pro-rating{
+.single-pro-rating {
    display: flex;
    align-items: center;
    font-weight: 500;
 }
 
-.rating-star{
+.rating-star {
    color: rgb(255, 217, 24);
-   margin:0px 6px 0px 2px;
+   margin: 0px 6px 0px 2px;
 }
 
-.sin-pro-price-offers{
+.sin-pro-price-offers {
    display: flex;
    justify-content: space-between;
 }
 
-.sin-pro-price-offers > p:nth-child(1){
+.sin-pro-price-offers>p:nth-child(1) {
    font-size: 18px;
    font-weight: 500;
 }
 
-.sin-pro-price-offers > p:nth-child(2){
+.sin-pro-price-offers>p:nth-child(2) {
    color: rgb(213, 0, 0);
    cursor: pointer
 }
 
-.single-pro-buttons{
+.single-pro-buttons {
    display: flex;
    flex-direction: column;
 }
 
-.single-pro-buttons > button{
+.single-pro-buttons>button {
    background-color: orange;
    border: 2px solid rgb(55, 55, 55);
    border-radius: 5px;

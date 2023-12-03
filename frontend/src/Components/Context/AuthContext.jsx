@@ -34,6 +34,7 @@ const ParentAuthContext = ({ children }) => {
       try {
         const response = await api.post("/auth/get-current-user", { token })
         if (response.data.success) {
+          console.log(response.data.user, "response.data.user")
           Login(response.data.user)
         }
       } catch (error) {

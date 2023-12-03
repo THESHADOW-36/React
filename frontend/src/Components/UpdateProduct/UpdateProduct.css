@@ -1,0 +1,18 @@
+
+.your-product-image{
+  border: 3px solid black;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 12px;
+}
+.your-product-image img{
+  width: 150px;
+}
+
+.your-product-form{
+  font-size: 18px;
+}
+
+.your-product-form>input{
+  font-size: 16px;
+}

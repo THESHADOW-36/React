@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import api from "../../Helpers/Axios.Config";
 import { AuthContext } from "../Context/AuthContext";
+import Navbar from "../Header/Navbar";
 
 const Login = () => {
    const [userData, setUserData] = useState({ email: "", password: "" })
@@ -28,7 +29,7 @@ const Login = () => {
                   console.log(response.data, "response data")
                   toast.success("Login Successful")
                   setUserData({ email: "", password: "" })
-                  router("/")
+                  router("/products")
                } else {
                   throw new Error("Something went wrong...")
                }
@@ -46,17 +47,20 @@ const Login = () => {
 
 
    return (
-      <div>
-         <h1>Login</h1>
-         <form onSubmit={sendDataToBackend}>
-            <label>Email</label><br />
-            <input name="email" type="email" onChange={handleChange} /><br />
-            <label>Password</label><br />
-            <input name="password" type="password" onChange={handleChange} /><br />
-            <br />
-            <input type="Submit" value="Submit" />
-         </form>
-      </div>
+      <>
+         <Navbar />
+         <div>
+            <h1>Login</h1>
+            <form onSubmit={sendDataToBackend}>
+               <label>Email</label><br />
+               <input name="email" type="email" onChange={handleChange} /><br />
+               <label>Password</label><br />
+               <input name="password" type="password" onChange={handleChange} /><br />
+               <br />
+               <input type="Submit" value="Submit" />
+            </form>
+         </div>
+      </>
    )
 }
 

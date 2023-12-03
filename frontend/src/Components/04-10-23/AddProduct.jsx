@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
+import "./AddProduct.css"
 import toast from "react-hot-toast";
 import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import api from "../../Helpers/Axios.Config";
+import Navbar from "../Header/Navbar";
 
 
 const AddProduct = () => {
@@ -21,7 +23,7 @@ const AddProduct = () => {
       event.preventDefault();
       if (productData.name && productData.price && productData.image && productData.category) {
          try {
-            const { data } = await api.post("/product/add-product", { name: productData.name, price: productData.price, image: productData.image, category: productData.category, id: state?.user.id })
+            const { data } = await api.post("/product/add-product", { name: productData.name, price: productData.price, image: productData.image, category: productData.category, id: state?.user?.id })
             if (data.success) {
                toast.success(data.message)
                setProductData({ name: "", price: "", image: "", category: "" })
@@ -39,26 +41,32 @@ const AddProduct = () => {
    useEffect(() => {
       if (state?.user && !state?.user?.name) {
          router("/login")
-         toast.error("Pls login to access this page")
-      }
-   }, [state])
-
+         toast.error("Pls login to access this page")}
+         if (!state?.user && state?.user?.name === undefined) {
+            router('/login')
+            toast.error("Please login to access this page")
+         }
+         // eslint-disable-next-line
+      }, [state])
    return (
-      <div>
-         <h1>Add Product</h1>
-         <form onSubmit={handleSubmit}>
-            <label>Product Name</label><br />
-            <input type="text" name="name" onChange={handleChange} value={productData.name} /><br />
-            <label>Product Price</label><br />
-            <input type="number" name="price" onChange={handleChange} value={productData.price} /><br />
-            <label>Product Image</label><br />
-            <input type="url" name="image" onChange={handleChange} value={productData.image} /><br />
-            <label>Product Category</label><br />
-            <input type="text" name="category" onChange={handleChange} value={productData.category} /><br />
-            <br />
-            <input type="submit" /><br />
-         </form>
-      </div>
+      <>
+         <Navbar />
+         <div className="add-product">
+            <h1>Add Product</h1>
+            <form onSubmit={handleSubmit} className="add-product-form">
+               <label>Product Name</label><br />
+               <input type="text" name="name" onChange={handleChange} value={productData.name} /><br />
+               <label>Product Price</label><br />
+               <input type="number" name="price" onChange={handleChange} value={productData.price} /><br />
+               <label>Product Image</label><br />
+               <input type="url" name="image" onChange={handleChange} value={productData.image} /><br />
+               <label>Product Category</label><br />
+               <input type="text" name="category" onChange={handleChange} value={productData.category} /><br />
+               <br />
+               <input type="submit" /><br />
+            </form>
+         </div>
+      </>
    )
 }
 
