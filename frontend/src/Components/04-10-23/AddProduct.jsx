@@ -39,13 +39,15 @@ const AddProduct = () => {
    }
 
    useEffect(() => {
-      if (!state?.user && state?.user?.name === undefined) {
-         router('/login')
-         toast.error("Please login to access this page")
-      }
-      // eslint-disable-next-line
-   }, [state])
-
+      if (state?.user && !state?.user?.name) {
+         router("/login")
+         toast.error("Pls login to access this page")}
+         if (!state?.user && state?.user?.name === undefined) {
+            router('/login')
+            toast.error("Please login to access this page")
+         }
+         // eslint-disable-next-line
+      }, [state])
    return (
       <>
          <Navbar />
