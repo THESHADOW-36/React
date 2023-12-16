@@ -14,6 +14,7 @@ const Cart = () => {
     try {
       const response = await api.post("/user/cart", { id: state?.user?.id })
       if (response.data.success) {
+        console.log(response.data.products)
         setCartProducts(response.data.products)
       }
     } catch (error) {
@@ -49,6 +50,7 @@ const Cart = () => {
     } catch (error) {
       console.log(error)
     }
+    // eslint-disable-next-line
   }, [state])
 
   return (
@@ -56,7 +58,7 @@ const Cart = () => {
       <Navbar />
       <h1>Cart</h1>
       <div className="ypro-layout">
-        {cartProducts.length && cartProducts.map((pro) => (
+        {cartProducts?.length && cartProducts.map((pro) => (
           <div className="ypro-content" key={pro._id}>
             <div className="ypro-img-box">
               <img src={pro.image} alt="product-img" className="ypro-img" />
